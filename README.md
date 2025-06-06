@@ -59,13 +59,13 @@ Navigate to your working directory and run the container:
 #### CPU-only version:
 
 ```bash
-sudo docker run -it -v ${PWD}:/workspace ghcr.io/pip700/cardiotoxpred:predictor --name cardiotoxpred
+sudo docker run -it --rm -v ${PWD}:/workspace ghcr.io/pip700/cardiotoxpred:cpu
 ```
 
 #### GPU-enabled version:
 
 ```bash
-sudo docker run --gpus all -it -v ${PWD}:/workspace ghcr.io/pip700/cardiotoxpred:predictor --name cardiotoxpred
+sudo docker run --gpus all -it --rm -v ${PWD}:/workspace ghcr.io/pip700/cardiotoxpred:gpu
 ```
 
 ### 3. Input File Selection
